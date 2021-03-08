@@ -6,12 +6,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p >
          Caleón Estudio
         </p>
-        <a
+        <a 
           className="App-link"
-          href="https://reactjs.org"
+          href="https://instagram.com/caleonestudio?igshid=ne8hn9akptwx"
           target="_blank"
           rel="noopener noreferrer"
         >
