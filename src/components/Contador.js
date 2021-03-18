@@ -9,7 +9,7 @@ export class Contador extends Component {
                 <p>Mi contador: {this.state.count}</p>
                 <button onClick={() => {
                     this.setState ({ count: this.state.count + 1});
-
+                  
                 }}
                 >
                 Click 
