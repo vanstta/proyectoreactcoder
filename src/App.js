@@ -2,8 +2,9 @@
 import './App.css';
 import {NavBar} from "./components/NavBar";
 import {Home} from "./components/Home";
-import {Contador} from "./components/Contador";
-import {MostrarContador} from "./components/MostrarContador"
+import {ItemListContainer} from "./components/ItemListContainer";
+
+
 function App() {
   return (
     <div className="App">
@@ -15,8 +16,9 @@ function App() {
      
      </div>
      <div>
-  <Contador/>
-  <MostrarContador/>
+  
+  <ItemListContainer/>
+  
      </div>
     
     </div>

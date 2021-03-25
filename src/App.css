@@ -278,3 +278,27 @@ background-color: rgba(211, 211, 211, 0.459);
  
 }
 
+/* CARD  */
+
+.stock {
+  margin: 30px;
+}
+
+.agregar {
+  background-color:#F5C302;
+  width: 100%;
+  /* margin-left: 5%; */
+  box-shadow: none;
+  border:  none;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: Roboto, sans-serif;
+  margin-top: 15px;
+  
+}
+.agregar:hover {
+  background-color:#F5C302;
+  box-shadow: 0 0 10px  #faae21, 0 0 15px #faae21, 0 0 15px #faae21;
+  border: none;
+
+}

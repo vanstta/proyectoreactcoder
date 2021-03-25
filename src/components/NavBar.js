@@ -26,7 +26,7 @@ export const NavBar = () => {
                     <a href="">contacto</a>
                 </li>
             </ul>
-            <div class="redes">
+            <div className="redes">
                 <a href="#">  <img src={logofb} className="icon" alt="logo facebook" />
                 </a>
                 <a href="#">  <img src={logoig} className="icon" alt="logo instagram" />
