@@ -245,44 +245,10 @@ background-color: rgba(211, 211, 211, 0.459);
 
 /* CONTADOR */
 
-.contenedorContador {
-  background-color: #F5C302;
-  width: 30%;
-  height: 80px;
-  margin-left: 35%;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.contenedorBotones {
-  display: flex;
-  justify-content: center;
- 
-  
-}
-
-.suma, .resta {
-
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: black;
-  color: white;
-  border: none;
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-.resta {
-  margin-left: 20px;
- 
-}
 
 /* CARD  */
 
-.stock {
-  margin: 30px;
-}
+
 
 .agregar {
   background-color:#F5C302;
@@ -301,4 +267,9 @@ background-color: rgba(211, 211, 211, 0.459);
   box-shadow: 0 0 10px  #faae21, 0 0 15px #faae21, 0 0 15px #faae21;
   border: none;
 
+}
+
+.stock {
+  display: flex;
+  flex-direction: row;
 }
