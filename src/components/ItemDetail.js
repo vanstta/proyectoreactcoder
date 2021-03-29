@@ -12,7 +12,7 @@ export default function ItemDetail({ item }) {
             <p> Stock: {item?.stock} </p>
             <p>Disponibilidad: {item?.disponibilidad}</p>
             
-            <button className="agregar"data-id="">Agregar al carrito</button>
+            <button className="agregar">Agregar al carrito</button>
     
             </div>
   </>;

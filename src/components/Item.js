@@ -12,7 +12,7 @@ export const Item = ({ item }) => {
     <p className="card-text"></p>
     <h4 className="precio_producto"><strong>${item.precio}</strong></h4>
     <p>{item.descripcion}</p>
-    <Link to={`/detalle`}>  <button>Ver detalle</button></Link>
+    <Link to={`/item/${item.id}`}>  <button>Ver detalle</button></Link>
     <button className="agregar"data-id="">Agregar al carrito</button>
     </div>
     </div>
