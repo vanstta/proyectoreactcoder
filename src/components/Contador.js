@@ -21,5 +21,6 @@ export function Contador({stock, initial, onAdd}) {
     <div>{count}</div>
     <button disabled={count>=stock} onClick={incrementar}>+</button>
     <button disabled={count>=stock || count<=0} onClick= {agregar}>Agregar producto</button>
+   
   </div>
 }

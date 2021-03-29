@@ -2,28 +2,30 @@
 import logofb from './images/logofb.png'
 import logoig from './images/logoig.png'
 import logopt from './images/logopt.png'
+import {CartWidget} from "./CartWidget";
+import {link, NavLink} from 'react-router-dom';
 
 
 import React from "react";
 export const NavBar = () => {
     return <div>
          <nav className="nav">
-         <a className="logo" href="index.html">Caleón</a>
+         <NavLink to={`/`}><h2 className="logo">CALEÓN</h2></NavLink>
             <ul>
                 <li>
-                    <a href="">inicio</a>
+                   <NavLink to={`/`}>inicio</NavLink>
                 </li>
                 <li>
-                    <a href="">productos</a>
+                <NavLink to={`/category/:id`}>productos</NavLink>
                 </li>
                 <li>
-                    <a href="">nosotros</a>
+                <NavLink to={`/`}>nosotros</NavLink>
                 </li>
                 <li>
-                    <a href="">galeria</a>
+                <NavLink to={`/`}>galería</NavLink>
                 </li>
                 <li>
-                    <a href="">contacto</a>
+                <NavLink to={`/`}>contacto</NavLink>
                 </li>
             </ul>
             <div className="redes">
@@ -40,5 +42,4 @@ export const NavBar = () => {
 </div>
 
 
-    
 }

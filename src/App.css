@@ -94,6 +94,7 @@ src: url('../src/components/fuentes/LEMONMILK-Bold.otf'); }
       text-decoration: none;
   }
 
+
   .redes {
     margin-top: 15px;
     display: flex;
@@ -140,6 +141,7 @@ src: url('../src/components/fuentes/LEMONMILK-Bold.otf'); }
 
 .p-index {
   font-size: 23px;
+  text-align: center;
 }
 
 div h2 {
@@ -297,3 +299,4 @@ background-color: rgba(211, 211, 211, 0.459);
 .titDetail {
   font-weight: 700;
 }
+
