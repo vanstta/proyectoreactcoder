@@ -19,6 +19,33 @@
                 precio: 4000, imgURL:"https://github.com/vanstta/Caleon/blob/master/images/mesa.JPG?raw=true",
                 stock: "-", 
                 disponibilidad: "Por encargo"
+}, 
+{
+                id: 4,
+                titulo: "Espejo",
+                descripcion: "Espejo Cápsula con estructura de chapa y estante de acrílico -  Formato 25x70x10 cm. -  Disponible en rojo, amarillo, cyan y megenta. ",
+                precio: 2199.00,
+                imgURL: "https://github.com/vanstta/Caleon/blob/master/images/espejo.JPG?raw=true",
+                stock: 4,
+                disponibilidad: "Inmediata"
+},
+{
+                id: 5,
+                titulo: "Lámpara",
+                descripcion: "Lámpara LED con estructura de chapa y frente de acrílico - Formato 120x20 cm. - Disponible en rojo, amarillo, cyan y megenta.",
+                precio: 2599.00,
+                imgURL: "https://github.com/vanstta/Caleon/blob/master/images/lampara.JPG?raw=true",
+                stock: 2, 
+                disponibilidad: "Inemdiata"
+},
+{
+                id: 6,
+                titulo: "Silla",
+                descripcion: "Silla metálica resistente - Medidas 81cm alto x 46cm ancho y 50cm profundidad - Disponible en rojo, amarillo, cyan y megenta.",
+                precio: 3799.00,
+                imgURL: "https://github.com/vanstta/Caleon/blob/master/images/silla.jpg?raw=true",
+                stock: "-",
+                disponibilidad: "Por encargue"
 }
 
 
