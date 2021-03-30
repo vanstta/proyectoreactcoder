@@ -2,8 +2,8 @@
 import logofb from './images/logofb.png'
 import logoig from './images/logoig.png'
 import logopt from './images/logopt.png'
-import {CartWidget} from "./CartWidget";
-import {link, NavLink} from 'react-router-dom';
+import CartWidget from "./CartWidget";
+import {Link, link, NavLink} from 'react-router-dom';
 
 
 import React from "react";
@@ -29,12 +29,7 @@ export const NavBar = () => {
                 </li>
             </ul>
             <div className="redes">
-                <a href="#">  <img src={logofb} className="icon" alt="logo facebook" />
-                </a>
-                <a href="#">  <img src={logoig} className="icon" alt="logo instagram" />
-                </a>
-                <a href="#">  <img src={logopt} className="icon" alt="logo pinterest" />
-                </a>
+                <Link to="/category/:categoryId" > <CartWidget/></Link>
                
             </div>
             </nav>
