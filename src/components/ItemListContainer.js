@@ -35,7 +35,4 @@ export default function ItemListContainer() {
 
 }
 
-// DESCRIPCIONES PARA USAR EN DETAIL
-// , descripcion:"Ilustración en vinilo ploteada sobre fibrofácil de 5mm, laminado mate y marco de acrílico importado - Formato 21x29,7cm / 60x90 cm - Disponible en rojo, amarillo, cyan y magenta."
 
-// , descripcion:"Mesa ratona circular con superficie de acrílico con estructura metálica - Protección contra rayos UV - Formato 60x45cm. -  Disponible en rojo, amarillo, cyan y megenta."

@@ -2,10 +2,9 @@
 import './App.css';
 import {NavBar} from "./components/NavBar";
 import {Home} from "./components/Home";
-
+import {Item}from "./components/Item"
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemDetail from './components/ItemDetailContainer'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 
@@ -28,11 +27,11 @@ function App() {
       <Route exact path="/item/:itemId/">
       <ItemDetailContainer/>
       </Route>
-
-    
-     
+      <Route exact path="/Item/:id">
+      <Item/>
+      </Route>
     </Switch>
-    
+
      </BrowserRouter>
    
   );

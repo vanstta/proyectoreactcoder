@@ -8,7 +8,7 @@
                 id: 2, 
                 titulo: "Cuaderno", 
                 descripcion: "Tapa dura - Formato A6 (10,5x14,8cm) - Tapa dura con laminado mate - 80 hojas booclel lisas de 80 gr + una hoja lisa de color + un sobre - Disponible en rojo, amarillo, cyan y magenta.", 
-                precio: 800, 
+                precio: 800, imgURL:"https://github.com/vanstta/Caleon/blob/master/images/cuaderno.JPG?raw=true",
                 stock: 8, 
                 disponibilidad: "Inmediata"
 },
@@ -16,10 +16,12 @@
                 id: 3, 
                 titulo: "Mesa", 
                 descripcion: "Tapa dura - Formato A6 (10,5x14,8cm) - Tapa dura con laminado mate - 80 hojas             booclel lisas de 80 gr + una hoja lisa de color + un sobre - Disponible en rojo, amarillo,             cyan y magenta.", 
-                precio: 4000,
+                precio: 4000, imgURL:"https://github.com/vanstta/Caleon/blob/master/images/mesa.JPG?raw=true",
                 stock: "-", 
                 disponibilidad: "Por encargo"
 }
+
+
 ]
 
 export default data

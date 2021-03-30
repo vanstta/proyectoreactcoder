@@ -1,6 +1,5 @@
 import React from 'react'
-import { Contador } from "./Contador";
-import {ItemList} from "./ItemList"
+
 
 export default function ItemDetail({ item }) {
     
@@ -18,14 +17,9 @@ export default function ItemDetail({ item }) {
             <button className="agregar">Agregar al carrito</button>
     
             </div>
+            
         
   </>;
-      return (
-        <div className="container ">
-    
-          <ItemList item={item}/>
-          <Contador initial={1} stock = {7} onAdd = {() => {console.log('se agregó un item')}}/>
-        </div>
-      );
+   
  
   }
