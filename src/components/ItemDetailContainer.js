@@ -23,10 +23,10 @@ export default function ItemDetailContainer() {
     },);
 
     return (
-        <fragment>
+        <div>
 
             <ItemDetail item={item} />
-        </fragment>
+        </div>
     );
     
 }

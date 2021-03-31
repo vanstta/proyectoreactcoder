@@ -12,8 +12,8 @@ export const Item = ({ item }) => {
     <p className="card-text"></p>
     <h4 className="precio_producto"><strong>${item.precio}</strong></h4>
     <p>{item.descripcion}</p>
-    <Link to={`/item/${item.id}`}>  <button className="verDetalle">Ver detalle</button></Link>
-    <button className="agregar"data-id="">Agregar al carrito</button>
+    <Link to={`/item/${item.id}`}>  <button className="detalle">Ver detalle</button></Link>
+    
     </div>
     </div>
     </div>

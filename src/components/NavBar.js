@@ -1,7 +1,4 @@
-// import logo from '.././logo.JPG';
-import logofb from './images/logofb.png'
-import logoig from './images/logoig.png'
-import logopt from './images/logopt.png'
+
 import CartWidget from "./CartWidget";
 import {Link, link, NavLink} from 'react-router-dom';
 
@@ -29,7 +26,7 @@ export const NavBar = () => {
                 </li>
             </ul>
             <div className="redes">
-                <Link to="/category/:categoryId" > <CartWidget/></Link>
+                <Link to="/cart" > <CartWidget/></Link>
                
             </div>
             </nav>
