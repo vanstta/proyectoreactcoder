@@ -6,7 +6,7 @@ export const Item = ({ item }) => {
 
     <div className="col mb-4">
     <div className="card producto">
-    <img src={item.imgURL} alt="" style={{width: "100%"}} />
+    <img className="imgItem" src={item.imgURL} alt=""  />
     <div className="card-body">
     <h5 className="card-title">{item.titulo}</h5>
     <p className="card-text"></p>
@@ -23,3 +23,4 @@ export const Item = ({ item }) => {
 };
 
 
+// style={{width: "100%"}}

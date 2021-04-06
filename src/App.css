@@ -276,6 +276,10 @@ background-color: rgba(211, 211, 211, 0.459);
   flex-direction: row;
 }
 
+.imgItem{
+ width: auto;
+}
+
 /* DETALLE */
 
 .imgDetail {
@@ -317,4 +321,14 @@ background-color: rgba(211, 211, 211, 0.459);
   background-color:#000000;
   color: #F5C302;
   border: none;
+}
+
+/* PRODUCTOS */
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-item:hover {
+background-color: rgb(53, 53, 53);
 }
