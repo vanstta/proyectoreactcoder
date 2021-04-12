@@ -13,9 +13,9 @@ export const NavBar = () => {
                    <NavLink to={`/`}>inicio</NavLink>
                 </li>
                 <li>
-                <NavLink to={`/category/:id`}>
+                <NavLink to={`#`}>
                 <div className="dropdown">
-  <Link to={`/productos`} role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <Link to={`#`} role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     productos
   </Link>
 
@@ -23,6 +23,7 @@ export const NavBar = () => {
     <Link to={`/category/home-deco`} className="dropdown-item "> home-deco</Link>
     <Link to={`/category/desk`} className="dropdown-item" >desk</Link>
     <Link to={`/category/tech`} className="dropdown-item" >tech</Link>
+    <Link to={`/productos`} className="dropdown-item" >ver todo</Link>
   </div>
 </div></NavLink>
                 </li>

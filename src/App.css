@@ -325,6 +325,11 @@ background-color: rgba(211, 211, 211, 0.459);
 
 /* PRODUCTOS */
 
+.dropdown {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
 .dropdown-menu {
   background-color: black;
 }
@@ -332,3 +337,4 @@ background-color: rgba(211, 211, 211, 0.459);
 .dropdown-item:hover {
 background-color: rgb(53, 53, 53);
 }
+
