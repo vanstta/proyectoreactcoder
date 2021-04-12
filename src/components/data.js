@@ -3,7 +3,7 @@
     descripcion: "Ilustración en vinilo ploteada sobre fibrofácil de 5mm, laminamate y marco de acrílico importado - Formato 21x29,7cm / 60x90 cm - Disponiben rojo, amarillo, cyan y magenta.", 
     precio: 999.99, imgURL:"https://github.com/vanstta/Caleon/blob/master/images/cuadro.jpg?raw=true", stock: 5, 
     disponibilidad: "Inmediata",
-    category: "deco"
+    category: "desk"
  },
 
    { id: 2, 
@@ -12,7 +12,7 @@
     precio: 799.99, imgURL:"https://github.com/vanstta/Caleon/blob/master/images/cuaderno.JPG?raw=true",
     stock: 8, 
     disponibilidad: "Inmediata",
-    category: "deco"
+    category: "desk"
 },
 
 {
@@ -20,7 +20,7 @@
     descripcion: "Realizado en acrílico transparente de 10 x 10 cm. x 0.4 mm. de espesor - Resistente a golpes y caídas - Disponible en rojo, amarillo, cyan y magenta.",
     stock: "10",
     disponibilidad: "Inmediata",
-    category: "deco"
+    category: "desk"
 },
 
 {
@@ -28,7 +28,7 @@
     descripcion: "Agenda 2021 - Tapa dura - Formato A6 (10,5x14,8cm) - 220 páginas con hojas libres para anotaciones - Disponible en rojo, amarillo, cyan y magenta.",
     stock: "12",
     disponibilidad: "Inmediata",
-    category: "deco"
+    category: "desk"
 },
 {
   id: 5, 
@@ -36,7 +36,7 @@
   descripcion: "Mesa ratona circular con superficie de acrílico con estructura metálica - Protección contra rayos UV - Formato 60x45cm. -  Disponible en rojo, amarillo, cyan y magenta.", precio: 3999.99, imgURL:"https://github.com/vanstta/Caleon/blob/master/images/mesa.JPG?raw=true",
   stock: "-", 
   disponibilidad: "Por encargo",
-  category: "desk"
+  category: "home-deco"
 }, 
 {
   id: 6,
@@ -46,7 +46,7 @@
   imgURL: "https://github.com/vanstta/Caleon/blob/master/images/espejo.JPG?raw=true",
   stock: 4,
   disponibilidad: "Inmediata",
-  category: "desk"
+  category: "home-deco"
 },
 {
   id: 7,
@@ -56,7 +56,7 @@
   imgURL: "https://github.com/vanstta/Caleon/blob/master/images/lampara.JPG?raw=true",
   stock: 2, 
   disponibilidad: "Inemdiata",
-  category: "desk"
+  category: "home-deco"
 },
 {
   id: 8,
@@ -66,7 +66,7 @@
   imgURL: "https://github.com/vanstta/Caleon/blob/master/images/silla.jpg?raw=true",
   stock: "-",
   disponibilidad: "Por encargo",
-  category: "desk"
+  category: "home-deco"
 },
 
 {

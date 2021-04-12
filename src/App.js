@@ -24,6 +24,9 @@ function App() {
       <Home/>
     
       </Route>
+      <Route  path="/productos"> 
+        <ItemListContainer/>
+      </Route>
       <Route  path="/category/:categoryId"> 
         <ItemListContainer/>
       </Route>
