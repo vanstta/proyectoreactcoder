@@ -1,42 +1,76 @@
-import React, {useState} from 'react';
-const CartContext = React.createContext();
 
-function CartProvider ({defaultValue = [], children}) {
+import React, {useState,useEffect} from 'react'
 
-const [cart, setCart] = useState(defaultValue);
+export const  CartContext = React.createContext([])
 
-const cartLength = () => {
-    return cart.reduce((accumulator, currentValue) => {return accumulator + currentValue.cant}, 0);
+export const CartProvider = ({children}) => {
+    // array con items de este forma   {item:item, quantity: number}
+    const [cart,setCart] = useState([])
+    const [totalItems,setTotalItems] = useState(0);
+    const [totalPrecio,setTotalPrecio] = useState(0)
 
-}
+    useEffect(()=>{
+        let precio= cart.reduce((acumulador,itemActual)=>{
+            const p = itemActual.quantity * itemActual.item.precio
+            return acumulador + p 
+        },0);
 
-const cartPrice = () => {
-    return cart.reduce((accumulator, currentValue)=> {return accumulator, currentValue.cant * currentValue.prod.price})
-}
+        let totItems= cart.reduce((accumulador, ItemActual)=>{
+            return accumulador + ItemActual.quantity
+        },0);
 
-const addToCart = (newProduct, quantity) => {
-    let prodIndex = cart.findIndex (item=> item.prod.id ===newProduct.id);
-    if (prodIndex=== -1) {
-        setCart (cart => [...cart, {prod:newProduct, cant: quantity}]);
-        console.log(`Se agrego ${newProduct.titulo}, cantidad ${quantity}`);
-    } else {
-        let modifiedCart = [...cart];
-        modifiedCart[prodIndex].cant += quantity;
-        setCart(modifiedCart)
+        // for(let cartItem of cart) {
+        //     totItems += cartItem.quantity;
+        //     precio += cartItem.quantity * cartItem.item.price;
+        // }
+
+        setTotalItems(totItems);
+        setTotalPrecio(precio)
+
+    },[cart])
+    
+
+    const addItem = (newItem, newQuantity)=>{
+
+        const prevCartItem = cart.find(e=> e.item.id === newItem.id)
+
+        let newCart;
+        let qty;
+        if (prevCartItem){
+            newCart = cart.filter(e => e.item.id !== newItem.id)
+            qty = prevCartItem.quantity + newQuantity;
+        }else{
+            newCart = [...cart]
+            qty =  newQuantity;
+        }
+
+        setCart([...newCart, 
+                { item: newItem , quantity: qty  }])
+                console.log(`Se agrego ${newItem.titulo}, cantidad ${qty}`);
+        
     }
-}
 
-const dropCart = () => {
-    setCart ([]);
-}
 
-return (
-    <CartContext.Provider value={{cart, addToCart, cartLength, cartPrice, dropCart}}>
+    const removeItem = (itemId) =>{
+        const newCart = cart.filter(e => e.item.id !== itemId)
+        setCart(newCart)
+    }
+    
+    const clear = ()=>{
+        setCart([])
+    } 
+    
+    const isInCart = (id) =>{
+        const currentItem = cart.find(e=> e.item.id === id)
+
+        return currentItem ? true : false
+    } 
+
+
+
+    return (
+    <CartContext.Provider value={{cart,addItem,removeItem,clear,isInCart, totalItems,totalPrecio}} >
         {children}
     </CartContext.Provider>
-)
-
-
+    )
 }
-
-export  {CartProvider, CartContext}

@@ -1,3 +1,4 @@
+
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
@@ -8,11 +9,11 @@ export default function ItemDetail({ item }) {
     const [count, SetCount] = useState (0)
 
     const addHandler = (contador)=>{
-        addToCart(item, contador)
+        addItem(item, contador)
         SetCount(contador)
     }
 
-const {addToCart} = useContext(CartContext);
+const {addItem} = useContext(CartContext);
 
     return <>
     <div 
