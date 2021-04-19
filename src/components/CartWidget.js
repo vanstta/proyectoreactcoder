@@ -8,7 +8,8 @@ export default function CartWidget() {
   const {totalItems} = useContext(CartContext)
  
   return <>
-   <i className="fas fa-shopping-cart"> <img src={cart}></img></i>
+   <i className="fas fa-shopping-cart"> <img let  src={cart}></img></i>
+  
           {totalItems? <i> {totalItems}</i>: null } 
   </>
   
