@@ -4,7 +4,7 @@ import ItemDetail from './ItemDetail'
 import { useParams } from "react-router-dom";
 import {getFirestore} from '../firebase/index'
 
-const getItems = (id) => { 
+const getItems = (id) => {  
     const db = getFirestore();
     const itemsCollection = db.collection('items')
     
@@ -14,7 +14,7 @@ const getItems = (id) => {
 
 export default function ItemDetailContainer() {
     const [item, setItem] = useState(null)
-    const {itemId} = useParams()
+    const {itemId, otroId} = useParams()
 
     useEffect(() => {
         getItems(itemId)
@@ -27,11 +27,12 @@ export default function ItemDetailContainer() {
         return;
     }, [itemId])
 
-    return (
+
+    return <> 
         <div>
 
             <ItemDetail item={item} />
         </div>
-    );
+    </>;
     
 }
