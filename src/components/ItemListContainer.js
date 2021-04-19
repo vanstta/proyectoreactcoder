@@ -4,20 +4,23 @@ import {getFirestore} from '../firebase/index'
 import { useParams } from "react-router-dom";
 
 export default function ItemListContainer() {
+
   const [items, setItems] = useState([])
   const {categoryId} = useParams()
+
     useEffect(() => {
   const db = getFirestore ()
 
   const itemsCollection= db.collection('items')
+  const fltrado = itemsCollection.where('category', '==', categoryId)
 
-  const prom = itemsCollection.get()
-        prom.then((snaptshot) => {
-           if (snaptshot.size>0) {
+  const prom = fltrado.get()
+        prom.then((snapshot) => {
+           if (snapshot.size>0) {
              console.log('Consulta de datos')
-             console.log(snaptshot.docs.map(doc => doc.data()))
-             console.log(snaptshot.docs.map(doc => doc.id))
-             setItems(snaptshot.docs.map(doc => {
+             console.log(snapshot.docs.map(doc => doc.data()))
+             console.log(snapshot.docs.map(doc => doc.id))
+             setItems(snapshot.docs.map(doc => {
               return {id:doc.id,  ...doc.data()}
             }
              ))
