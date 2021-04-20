@@ -23,7 +23,7 @@ export const NavBar = () => {
     <Link to={`/category/home-deco`} className="dropdown-item "> home-deco</Link>
     <Link to={`/category/desk`} className="dropdown-item" >desk</Link>
     <Link to={`/category/tech`} className="dropdown-item" >tech</Link>
-    <Link to={`/category`} className="dropdown-item" >ver todo</Link>
+    <Link to={`/productos`} className="dropdown-item" >ver todo</Link>
   </div>
 </div></NavLink>
                 </li>

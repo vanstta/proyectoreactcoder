@@ -11,8 +11,10 @@ export default function ItemListContainer() {
     useEffect(() => {
   const db = getFirestore ()
 
+
+
   const itemsCollection= db.collection('items')
-  const fltrado = itemsCollection.where('category', '==', categoryId)
+  const fltrado = categoryId? itemsCollection.where('category', '==', categoryId) : itemsCollection
 
   const prom = fltrado.get()
         prom.then((snapshot) => {
