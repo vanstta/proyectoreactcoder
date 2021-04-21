@@ -69,7 +69,7 @@ export const Cart = () => {
 
     }
 
-    const noItemComp = <h2>No hay Items en el carrito <Link to='/productos'>Ir al home </Link> </h2>;
+    const noItemComp = <h2>No agregaste ningún producto Caleón <Link to='/productos'>Elegí tu preferido! </Link> </h2>;
 
     if(totalItems === 0) return noItemComp
 
