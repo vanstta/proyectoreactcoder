@@ -1,7 +1,8 @@
 
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
+
 import {getFirestore, getFirebase} from '../firebase' 
 
 export const Cart = () => {
@@ -22,12 +23,12 @@ export const Cart = () => {
 
         const db = getFirestore();
 
-        const ordersCollection = db.collection('orders')
-        
+        const ordersCollection = db.collection("orders")
+
         const date = getFirebase().firestore.Timestamp.fromDate(new Date());
 
         const items = cart.map(cartItem => {
-            return {id: cartItem.id, titulo:cartItem.titulo, precio: cartItem.precio} 
+            return {id: cartItem.id, title:cartItem.title, price: cartItem.price} 
         })
 
         ordersCollection
@@ -59,7 +60,7 @@ export const Cart = () => {
                 batch.update(documento.ref,
                     {stock: nuevoStock}
                 )
-            
+                //update
                 
             }
 
@@ -69,7 +70,7 @@ export const Cart = () => {
 
     }
 
-    const noItemComp = <h2>No hay Items en el carrito <Link to='/productos'>Ir al home </Link> </h2>;
+    const noItemComp = <h2>No hay Items en el carrito <Link to='/'>Ir al home </Link> </h2>;
 
     if(totalItems === 0) return noItemComp
 
@@ -77,26 +78,27 @@ export const Cart = () => {
 
     return (
         <div>
-         
-                {idOrden? `Orden generada: ${idOrden}`: null}
-                {cart.map(cartItem => (
+            {idOrden? `Orden generada: ${idOrden}`: null}
+
+            {cart.map(cartItem => (
                 <div key={cartItem.item.id} >
-                    <div> titulo:  {cartItem.item.titulo}  </div>
+                    <div> Titulo:  {cartItem.item.title}  </div>
                     <div> cantidad: {cartItem.quantity} </div>
                     <button onClick={()=> removeItem(cartItem.item.id)}>borrar</button>
                 </div>)
                 )}
-                <div>Total:{totalPrecio}</div> 
-                <button onClick={clear}>borrar todo</button>         
-            
-  <form action=""  onSubmit={guardarOrden}>
+            <div>Total:{totalItems} y {totalPrecio}</div> 
+            <button onClick={clear}>Borrar todo</button>         
 
-<input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
-<input type="text" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
-<input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+            <form action=""  onSubmit={guardarOrden}>
 
-<button type="submit"> Generar orden</button>
-</form>
+                <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
+                <input type="text" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+
+                <button type="submit"> Generar orden</button>
+            </form>
+
         </div>
     )
 }

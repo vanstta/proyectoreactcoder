@@ -14,7 +14,7 @@ const getItems = (id) => {
 
 export default function ItemDetailContainer() {
     const [item, setItem] = useState(null)
-    const {itemId, otroId} = useParams()
+    const {itemId} = useParams()
 
     useEffect(() => {
         getItems(itemId)
