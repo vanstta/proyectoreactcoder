@@ -1,12 +1,12 @@
-import a from './images/a.JPG'
-import b from './images/b.JPG'
-import c from './images/c.JPG'
-import d from './images/d.JPG'
-import e from './images/e.JPG'
-import f from './images/f.JPG'
-import g from './images/g.JPG'
-import h from './images/h.JPG'
-import i from './images/i.JPG'
+import a from '../images/a.JPG'
+import b from '../images/b.JPG'
+import c from '../images/c.JPG'
+import d from '../images/d.JPG'
+import e from '../images/e.JPG'
+import f from '../images/f.JPG'
+import g from '../images/g.JPG'
+import h from '../images/h.JPG'
+import i from '../images/i.JPG'
 
 import React from "react";
 

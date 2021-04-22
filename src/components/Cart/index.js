@@ -1,8 +1,8 @@
 import React, { useContext, useState} from 'react'
 import { Link } from "react-router-dom";
-import { CartContext } from './CartContext';
+import { CartContext } from '../CartContext/';
 import firebase from 'firebase/app'
-import {getFirestore} from '../firebase'
+import {getFirestore} from '../../firebase'
 
 
 export const Cart = () => {

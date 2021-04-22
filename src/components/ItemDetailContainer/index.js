@@ -1,8 +1,8 @@
 
 import React, {useState, useEffect} from 'react'
-import ItemDetail from './ItemDetail'
+import ItemDetail from '../ItemDetail'
 import { useParams } from "react-router-dom";
-import {getFirestore} from '../firebase/index'
+import {getFirestore} from '../../firebase'
 
 
 const getItems = (id) => { /* Esta función debe retornar la promesa que resuelva con delay */ 

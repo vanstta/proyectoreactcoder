@@ -23,4 +23,3 @@ export const Item = ({ item }) => {
 };
 
 
-// style={{width: "100%"}}

@@ -4,7 +4,7 @@ import React, {useState,useEffect} from 'react'
 export const  CartContext = React.createContext([])
 
 export const CartProvider = ({children}) => {
-    // array con items de este forma   {item:item, quantity: number}
+    
     const [cart,setCart] = useState([])
     const [totalItems,setTotalItems] = useState(0);
     const [totalPrecio,setTotalPrecio] = useState(0)

@@ -1,13 +1,13 @@
 
 import './App.css';
-import {NavBar} from "./components/NavBar";
-import {Home} from "./components/Home";
-import {Item}from "./components/Item"
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import {NavBar} from "./components/NavBar/index";
+import {Home} from "./components/Home/index";
+import {Item}from "./components/Item/index"
+import ItemListContainer from './components/ItemListContainer/index';
+import ItemDetailContainer from './components/ItemDetailContainer/index';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import {Cart} from "./components/Cart"
-import {CartProvider} from "./components/CartContext"
+import {Cart} from "./components/Cart/index"
+import {CartProvider} from "./components/CartContext/index"
 
 
 
