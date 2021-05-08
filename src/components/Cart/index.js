@@ -11,10 +11,11 @@ export const Cart = () => {
     const [phone,setPhone] = useState('')
     const [email,setEmail] = useState('')
 
-  
+    
     const {cart,removeItem,totalItems,totalPrecio,clear} = useContext(CartContext)
 
     const generarOrden = (e)=>{
+        
         const db = getFirestore();
 
         const ordersCol = db.collection('orders');
@@ -28,8 +29,10 @@ export const Cart = () => {
             const id = cartItem.item.id;
             const titulo = cartItem.item.titulo;
             const precio = cartItem.item.precio * cartItem.quantity;
-
-            return {id, titulo, precio}   
+            console.log(cartItem.id)
+            
+            return {id, titulo, precio} 
+          
         })
       
 
@@ -64,34 +67,51 @@ export const Cart = () => {
         })
 
         console.log(orden)
-    }
+        clear();
 
-    const noItemComp = <h2>No agregaste ningún producto Caleón <Link to='/productos'>Elegí tu preferido! </Link> </h2>;
+        setTimeout(() => {
+            alert(`${name} Tu orden se generó de forma exitosa! Recibirás un correo en ${email}con los datos para abonar.`)
+        }, 1000);
+    }
+    
+  
+
+    const noItemComp = <div className="carritoVacio"><h2 >No agregaste ningún producto Caleón <Link className="link" to='/productos'><p className="lin2">Elegí tu preferido ACÁ!</p> </Link> </h2></div>
 
     if(totalItems === 0) return noItemComp
+ 
+   
 
     return (
-        <div>
-             
+        <div className="checkout ">
+             <h4>mis productos Caleón</h4>
            <ul style={{listStyle:'none', padding:0}}>
            {cart.map(cartItem => (
                 <div key={cartItem.item.id} >
                     <div> titulo:  {cartItem.item.titulo}  </div>
                     <div> cantidad: {cartItem.quantity} </div>
-                    <button onClick={()=> removeItem(cartItem.item.id)}>borrar</button>
+                    <button className="agregar" onClick={()=> removeItem(cartItem.item.id)}>borrar</button>
                 </div>)
                 )}
 
            </ul>
             <div>Total: {totalPrecio}</div> 
-            <button onClick={clear}>Borrar todo</button>  
+            <button className="borrar" onClick={clear}>Borrar todo</button>  
 
-<input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
-<input type="text" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
-<input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-            <button onClick={generarOrden}>Finalizar Compra</button>       
+
+            
+<div className="orden">
+<input type="text" placeholder="nombre y apellido"  value={name}  onChange={(e)=>setName(e.target.value) }/>
+<input type="text" placeholder="celular" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+<input type="text" placeholder="e-mail" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+</div>
+ <button className="agregar" onClick={generarOrden}>Finalizar Compra</button>  
+
 
 
         </div>
+        
     );
+    
+  
 }

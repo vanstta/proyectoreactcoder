@@ -12,11 +12,14 @@ export function Contador({stock, initial, onAdd}) {
 
   const agregar = () =>  onAdd(count)
   
-  return <div>
-    <button disabled={count<=0} onClick={decrementar}>-</button>
+  return <div className="botonesContador ">
+    <div className="aum_y_dis">
+    <button className="dec" disabled={count<=0} onClick={decrementar}>-</button>
     <div>{count}</div>
-    <button disabled={count>=stock} onClick={incrementar}>+</button>
-    <button disabled={count>=stock || count<=0}onClick= {agregar}>Agregar producto</button>
-   
+    <button className="inc" disabled={count>=stock} onClick={incrementar}>+</button>
+    </div>
+    <div>
+    <button className="sumar" disabled={count>=stock || count<=0}onClick= {agregar}>Agregar producto</button>
+    </div>
   </div>
 }

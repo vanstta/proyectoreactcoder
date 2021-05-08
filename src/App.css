@@ -22,29 +22,12 @@ src: url('../src/components/fuentes/LEMONMILK-Bold.otf'); }
     animation: App-logo-spin infinite 20s linear;
   }
 }
-/* 
-.App-header {
-  background-color: #000000;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+
 * {
   list-style: none;
 }
 
-  /* color: #F5C302; */
 
-
-
-/* body {
-  background-color: #F5C302;
-  
-} */
 .nav {
   background: #000000;
   height: 58px;
@@ -338,3 +321,125 @@ background-color: rgba(211, 211, 211, 0.459);
 background-color: rgb(53, 53, 53);
 }
 
+/* -------CART------- */
+
+.checkout {
+  width:50%;
+  background-color: black;
+  color: white;
+  margin-left: 25%;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.borrar {
+  background-color:#F5C302;
+  box-shadow: none;
+  border:  none;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: Roboto, sans-serif;
+  margin-top: 15px;
+}
+
+.borrar:hover {
+  background-color:#F5C302;
+  box-shadow: 0 0 10px  #faae21, 0 0 15px #faae21, 0 0 15px #faae21;
+  border: none;
+}
+
+.orden {
+  margin-top: 15px;
+}
+
+.carritoVacio {
+  background-color: black;
+  width: 100%;
+  height: 1000vh;
+  color: #F5C302;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.link, .link:hover {
+ color: white;
+ text-decoration: underline;
+}
+
+.lin2 {
+  margin-top: 20px;
+  }
+
+  /* --------CONTADOR -------- */
+  .botonesContador {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+  }
+ 
+  .aum_y_dis{
+    display: flex;
+   
+  }
+
+ .dec {
+   margin-right: 10px;
+   background-color:black;
+   color: white;
+   border: none;
+   width: 30px;
+   height: 30px;
+   border-radius: 10px;
+ }
+
+ .inc {
+  margin-left: 13px;
+  background-color:black;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.sumar {
+  background-color:#F5C302;
+  box-shadow: none;
+  border:  none;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: Roboto, sans-serif;
+  margin-left: 20px;
+}
+
+/* --------404-------- */
+
+.error {
+  background-color: #F5C302;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error h1, h2 {
+font-size: 50px;
+}
+
+.volver, .volver:hover {
+  color: black;
+  font-size: 20px;
+  text-decoration: underline;
+}

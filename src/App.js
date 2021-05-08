@@ -5,9 +5,10 @@ import {Home} from "./components/Home/index";
 import {Item}from "./components/Item/index"
 import ItemListContainer from './components/ItemListContainer/index';
 import ItemDetailContainer from './components/ItemDetailContainer/index';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom'
 import {Cart} from "./components/Cart/index"
 import {CartProvider} from "./components/CartContext/index"
+
 
 
 
@@ -41,6 +42,14 @@ function App() {
       
       <Cart/>
       </Route>
+     
+      <Route path="*">
+       <div className="error">
+						<h1>ERROR 404</h1>
+            <h2>PAGE NOT FOUND</h2>
+            <Link className="volver" to="/">Volver</Link>
+       </div>
+					</Route>
     </Switch>
     </CartProvider>
      </BrowserRouter>

@@ -18,7 +18,7 @@ const {addItem} = useContext(CartContext);
     return <>
     <div 
     className="containerDetail">
-             {count} 
+             
             <img className="imgDetail" src={item?.imgURL} alt=""/>
             <h2 className="titDetail">{item?.titulo}</h2>
             <p>{item?.descripcion}</p>
@@ -31,6 +31,7 @@ const {addItem} = useContext(CartContext);
                        :
                       <Link to="/cart"><button className="agregar">Finalizar compra</button>
                       </Link> 
+                    
              }
 
             </div>

@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import {getFirestore} from '../../firebase'
 
 
-const getItems = (id) => { /* Esta función debe retornar la promesa que resuelva con delay */ 
+const getItems = (id) => { 
     const db = getFirestore();
     const itemsCollection = db.collection('items')
     
