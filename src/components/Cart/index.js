@@ -10,7 +10,7 @@ export const Cart = () => {
     const [name,setName] = useState('')
     const [phone,setPhone] = useState('')
     const [email,setEmail] = useState('')
-
+    const [ordenId, setOrdenId] = useState('');
     
     const {cart,removeItem,totalItems,totalPrecio,clear} = useContext(CartContext)
 
@@ -20,6 +20,7 @@ export const Cart = () => {
 
         const ordersCol = db.collection('orders');
         const batch = db.batch();
+
         let orden = {}
         orden.date = firebase.firestore.Timestamp.fromDate(new Date());
 
@@ -39,7 +40,10 @@ export const Cart = () => {
         ordersCol.add(orden)
         .then((IdDocumento)=>{
             console.log(IdDocumento.id)
+            setOrdenId(IdDocumento.id)
         })
+
+
         .catch( err => {
             console.log(err);
         })
@@ -51,7 +55,7 @@ export const Cart = () => {
             firebase.firestore.FieldPath.documentId(), 'in', cart.map(i=> i.item.id)
         )
 
-        
+      
 
         itemsToUpdate.get()
         .then( collection=>{
@@ -65,13 +69,15 @@ export const Cart = () => {
                 console.log('resultado batch:', res)
             })
         })
+        
+       
+
+        setTimeout(() => {
+            alert(`${name} Tu orden ${ordenId}se generó de forma exitosa! Recibirás un correo en ${email}con los datos para abonar.`)
+        }, 1000);
 
         console.log(orden)
         clear();
-
-        setTimeout(() => {
-            alert(`${name} Tu orden se generó de forma exitosa! Recibirás un correo en ${email}con los datos para abonar.`)
-        }, 1000);
     }
     
   
@@ -84,6 +90,7 @@ export const Cart = () => {
 
     return (
         <div className="checkout ">
+         
              <h4>mis productos Caleón</h4>
            <ul style={{listStyle:'none', padding:0}}>
            {cart.map(cartItem => (
